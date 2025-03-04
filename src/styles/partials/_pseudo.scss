@@ -1,0 +1,21 @@
+@import "./variables";
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: $mainBackgroundColor;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $mainTextColor;
+    border-radius: 4px;
+}
+
+a {
+    :is(:focus, :hover) {
+        text-decoration: none;
+    }
+}
