@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 
+import { generateGlobalMetadata } from "@/utils/helpers/metadata";
+
 import "../styles/globals.scss";
 
 const geistSans = Geist({
@@ -20,10 +22,17 @@ const roboto = Roboto({
     subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-    title: "Portfolio",
-    description: "Portfolio",
+export const viewport = {
+    themeColor: [
+        // TODO: Change colors to variables
+        { media: "(prefers-color-scheme: light)", color: "cyan" },
+        { media: "(prefers-color-scheme: dark)", color: "black" },
+    ],
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+    return generateGlobalMetadata();
+}
 
 export default function RootLayout({
     children,
