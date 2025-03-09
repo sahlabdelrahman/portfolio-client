@@ -1,8 +1,8 @@
-@import "partials/mixins";
-@import "partials/pseudo";
-@import "partials/overwrite";
-@import "partials/variables";
-@import "partials/BreakPoints";
+@use "./partials/mixins";
+@use "./partials/pseudo";
+@use "./partials/overwrite";
+@use "./partials/variables" as *;
+@use "./partials/BreakPoints";
 
 :root {
     // --background: #ffffff;

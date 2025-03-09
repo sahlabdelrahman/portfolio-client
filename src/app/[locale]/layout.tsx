@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
+
+import { routing } from "@/i18n/routing";
 
 import { generateGlobalMetadata } from "@/utils/helpers/metadata";
 
-import "../styles/globals.scss";
+import "../../styles/globals.scss";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -34,17 +38,29 @@ export async function generateMetadata(): Promise<Metadata> {
     return generateGlobalMetadata();
 }
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
-}: Readonly<{
+    params,
+}: {
     children: React.ReactNode;
-}>) {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    if (!routing.locales.includes(locale as never)) {
+        notFound();
+    }
+
+    const messages = await getMessages();
+    const direction = locale === "ar" ? "rtl" : "ltr";
+
     return (
-        <html lang="en">
+        <html lang={locale} dir={direction}>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable}`}
             >
-                {children}
+                <NextIntlClientProvider messages={messages}>
+                    {children}
+                </NextIntlClientProvider>
             </body>
         </html>
     );
