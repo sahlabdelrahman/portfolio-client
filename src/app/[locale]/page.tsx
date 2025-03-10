@@ -1,7 +1,9 @@
+import styles from "./styles.module.scss";
+
 export default function Home() {
     return (
-        <div>
+        <main className={styles.main}>
             <p>Hello world</p>
-        </div>
+        </main>
     );
 }
