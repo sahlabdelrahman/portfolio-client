@@ -1,0 +1,29 @@
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+    z-index: 1;
+    .dot {
+        display: flex;
+        flex: 1;
+        max-width: 0.5rem;
+        max-height: 0.5rem;
+        min-width: 0.5rem;
+        min-height: 0.5rem;
+        border-radius: 50%;
+        background: var(--foreground);
+        transition: var(--global-transition);
+        opacity: 0.5;
+
+        &.active,
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

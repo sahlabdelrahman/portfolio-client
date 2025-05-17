@@ -1,0 +1,18 @@
+.arrows {
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: var(--global-transition);
+        z-index: 1;
+
+        &:hover {
+        }
+        &.prevSlide {
+            inset-inline-start: 1rem;
+        }
+        &.nextSlide {
+            inset-inline-end: 1rem;
+        }
+    }
+}

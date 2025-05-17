@@ -1,1 +1,10 @@
-{}
+{
+    "noData": "No data available yet, Please check back later.",
+    "browserNotSupportVideoTag": "Your browser does not support the video tag.",
+    "navigationArrows": "Slide Navigation Arrows",
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "slideNavigation": "Slide navigation",
+    "goToSlide": "Go to slide {{number}}",
+    "imageSlider": "Image slider"
+}
