@@ -22,4 +22,6 @@ export interface ItemProps {
     ariaLabel: string;
     duration?: number;
     videoControls?: VideoControlsProps;
+    title?: string;
+    description?: string;
 }

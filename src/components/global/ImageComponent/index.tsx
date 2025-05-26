@@ -1,3 +1,4 @@
+import { memo } from "react";
 import NextImage, { ImageProps as NextImageProps } from "next/image";
 
 import styles from "./styles.module.scss";
@@ -34,4 +35,4 @@ const ImageComponent = ({
     );
 };
 
-export default ImageComponent;
+export default memo(ImageComponent);

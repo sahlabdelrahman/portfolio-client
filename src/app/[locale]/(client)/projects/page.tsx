@@ -1,7 +1,22 @@
+import ItemsLayout from "@/components/global/ItemsLayout";
+import ItemLayout from "@/components/global/ItemsLayout/ItemLayout";
+
+import { ItemProps } from "@/types/client/global";
+
+import { items } from "../../config";
+
 export default function Projects() {
     return (
-        <div>
-            <p>Hello world from Projects page</p>
-        </div>
+        <main>
+            <ItemsLayout>
+                {items?.map((item: ItemProps) => (
+                    <ItemLayout
+                        key={item?.id}
+                        item={item}
+                        path={`/projects/${item?.id}`}
+                    />
+                ))}
+            </ItemsLayout>
+        </main>
     );
 }

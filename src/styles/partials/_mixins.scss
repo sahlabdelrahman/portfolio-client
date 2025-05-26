@@ -1,4 +1,4 @@
-@use "BreakPoints";
+@use "BreakPoints" as *;
 
 /**
  * Responsive Mixin
@@ -150,20 +150,19 @@
  */
 
 @mixin container($padding: 80px) {
-    width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
 
-    @include responsive("xl") {
-        width: 100%;
+    @include responsive(max, "xl") {
         padding-inline: $padding;
     }
 
-    @include responsive("lg") {
+    @include responsive(max, "md") {
         padding-inline: 40px;
     }
 
-    @include responsive("md") {
+    @include responsive(max, "sm") {
         padding-inline: 20px;
     }
 }

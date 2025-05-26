@@ -8,6 +8,9 @@ export const items = [
         height: 1000,
         ariaLabel: "video",
         duration: 20000,
+        title: "Image title",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         videoControls: {
             type: "video/mp4",
             controls: false,
@@ -31,6 +34,9 @@ export const items = [
         width: 1500,
         height: 1000,
         ariaLabel: "image",
+        title: "Image title",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
         id: "03",
@@ -64,6 +70,9 @@ export const items = [
         width: 1500,
         height: 1000,
         ariaLabel: "image",
+        title: "Image title",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
         id: "05",
@@ -97,6 +106,9 @@ export const items = [
         width: 1500,
         height: 1000,
         ariaLabel: "image",
+        title: "Image title",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
     {
         id: "07",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { ItemProps } from "@/types/client/global";
@@ -61,4 +61,4 @@ const VideoComp = ({
     );
 };
 
-export default VideoComp;
+export default memo(VideoComp);
