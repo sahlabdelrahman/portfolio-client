@@ -1,0 +1,9 @@
+@import "@/styles/partials/mixins";
+
+.textRenderer {
+    font-family: var(--font-geist-sans);
+
+    * {
+        font-family: inherit !important;
+    }
+}

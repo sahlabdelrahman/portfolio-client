@@ -8,13 +8,14 @@ import Dots from "./Dots";
 import SliderContent from "./SliderContent";
 
 import { ItemProps } from "@/types/client/global";
+import { SubItemProjectItemProps } from "@/app/[locale]/(client)/projects/[slug]/types";
 
 import styles from "./styles.module.scss";
 
 export const slideTime = 5000;
 
 interface SliderProps {
-    items: ItemProps[];
+    items: ItemProps[] | SubItemProjectItemProps[];
     autoPlay?: boolean;
     withBullets?: boolean;
     withArrows?: boolean;

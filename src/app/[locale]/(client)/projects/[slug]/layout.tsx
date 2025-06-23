@@ -1,19 +1,26 @@
+// TODO: Remember to replace static metadata with metadata from the project response
+
 import type { Metadata } from "next";
 
 import { PageMetadataProps } from "@/types/client/metadata";
 
 import { generateGlobalMetadata } from "@/utils/helpers/metadata";
+import { projects } from "./config";
+import { generalInfo } from "@/app/[locale]/config";
+
+const projectMetadata = projects[0];
 
 const staticPageMetadata = {
-    title: "Project",
-    description: "Explore my project.",
+    title: projectMetadata?.title || "",
+    description: projectMetadata?.description || "",
     openGraph: {
-        url: "",
-        siteName: "",
-        imageUrl: "",
-        twitterHandle: "",
+        url: projectMetadata?.url || "",
+        siteName: generalInfo?.siteName,
+        imageUrl: projectMetadata?.cover?.url || "",
+        twitterHandle: generalInfo?.twitterHandle,
     },
-    keywords: ["project"],
+    keywords: projectMetadata?.keywords,
+    category: projectMetadata?.category,
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -47,6 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
             },
         },
         keywords: pagemetadata?.keywords,
+        category: pagemetadata?.category,
     });
 }
 

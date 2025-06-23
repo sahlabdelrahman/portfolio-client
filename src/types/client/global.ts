@@ -1,4 +1,4 @@
-export interface VideoControlsProps {
+export interface MediaControlsProps {
     controls?: boolean;
     muted?: boolean;
     autoPlay?: boolean;
@@ -21,7 +21,7 @@ export interface ItemProps {
     height: number;
     ariaLabel: string;
     duration?: number;
-    videoControls?: VideoControlsProps;
+    mediaControls?: MediaControlsProps;
     title?: string;
     description?: string;
 }

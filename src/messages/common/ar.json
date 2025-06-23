@@ -1,6 +1,7 @@
 {
     "noData": "لا توجد بيانات متاحة بعد، يرجى التحقق لاحقًا.",
     "browserNotSupportVideoTag": "متصفحك لا يدعم الفيديو.",
+    "browserNotSupportAudioTag": "متصفحك لا يدعم الصوت.",
     "navigationArrows": "أسهم التنقل بين الشرائح",
     "prevSlide": "الشريحة السابقة",
     "nextSlide": "الشريحة التالية",

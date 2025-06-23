@@ -1,4 +1,5 @@
 import { ItemProps } from "@/types/client/global";
+import { SubItemProjectItemProps } from "@/app/[locale]/(client)/projects/[slug]/types";
 
 import VideoComp from "../../VideoComp";
 import ImageComponent from "../../ImageComponent";
@@ -10,7 +11,7 @@ import { useMemo } from "react";
 
 interface SliderContentProps {
     activeIndex: number;
-    items?: ItemProps[];
+    items?: ItemProps[] | SubItemProjectItemProps[];
 }
 
 const SliderContent = ({ activeIndex, items = [] }: SliderContentProps) => {

@@ -3,12 +3,13 @@ import NextImage, { ImageProps as NextImageProps } from "next/image";
 
 import styles from "./styles.module.scss";
 
-interface CustomImageProps extends Omit<NextImageProps, "src"> {
+interface CustomImageProps extends Omit<NextImageProps, "src" | "alt"> {
     url?: string;
     className?: string;
     width?: number;
     height?: number;
     ariaLabel?: string;
+    alt?: string;
 }
 
 const ImageComponent = ({
@@ -16,7 +17,7 @@ const ImageComponent = ({
     className = "",
     width = 200, // Default width
     height = 200, // Default height
-    alt,
+    alt = "",
     ariaLabel = "",
     ...rest
 }: CustomImageProps) => {

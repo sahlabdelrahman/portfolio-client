@@ -11,7 +11,7 @@ export const items = [
         title: "Image title",
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        videoControls: {
+        mediaControls: {
             type: "video/mp4",
             controls: false,
             muted: true,
@@ -47,7 +47,7 @@ export const items = [
         height: 1000,
         ariaLabel: "video",
         duration: 15000,
-        videoControls: {
+        mediaControls: {
             type: "video/mp4",
             controls: false,
             muted: true,
@@ -83,7 +83,7 @@ export const items = [
         height: 1000,
         ariaLabel: "video",
         duration: 15000,
-        videoControls: {
+        mediaControls: {
             type: "video/mp4",
             controls: false,
             muted: true,
@@ -119,7 +119,7 @@ export const items = [
         height: 1000,
         ariaLabel: "video",
         duration: 15000,
-        videoControls: {
+        mediaControls: {
             type: "video/mp4",
             controls: false,
             muted: true,
@@ -133,3 +133,9 @@ export const items = [
         },
     },
 ];
+
+// TODO: We need to create an endpoint to return general info for the user like social media links, general metadata and etc..,
+export const generalInfo = {
+    twitterHandle: "@sahlabdelrahman",
+    siteName: "sahlabdelrahman.com",
+};

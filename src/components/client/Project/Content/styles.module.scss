@@ -1,0 +1,16 @@
+@import "@/styles/partials/mixins";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    .coverSection {
+        @include container(true);
+        img,
+        video {
+            width: 100%;
+            height: 100dvh;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

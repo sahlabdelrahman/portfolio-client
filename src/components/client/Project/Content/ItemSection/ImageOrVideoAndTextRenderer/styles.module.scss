@@ -1,0 +1,21 @@
+@import "@/styles/partials/mixins";
+
+.wrapper {
+    display: flex;
+
+    &.align-start {
+        align-items: flex-start;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.align-end {
+        align-items: flex-end;
+    }
+    > * {
+        flex: 1;
+        min-width: 0;
+    }
+}

@@ -3,12 +3,13 @@ import { useTranslations } from "next-intl";
 import Button from "../../Button";
 
 import { ItemProps } from "@/types/client/global";
+import { SubItemProjectItemProps } from "@/app/[locale]/(client)/projects/[slug]/types";
 
 import styles from "./styles.module.scss";
 
 interface DotsProps {
     activeIndex: number;
-    items?: ItemProps[];
+    items?: ItemProps[] | SubItemProjectItemProps[];
     onClick: (index: number) => void;
 }
 

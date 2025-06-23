@@ -141,28 +141,40 @@
 
 /**
  * A mixin to create a responsive container with customizable padding.
+ * Optionally expands to full width without max-width or horizontal padding.
  *
- * @param {string} $padding - The padding value to apply.
+ * @param {boolean} $full - If true, removes max-width and horizontal padding for full-width layout. Default is false.
+ * @param {string} $padding - The padding value to apply at xl breakpoint and above. Default is 80px.
  *
  * @example
- * // Usage:
- * @include container(120px)
+ * // Regular container with custom padding
+ * @include container(false, 120px);
+ *
+ * @example
+ * // Full-width container with no padding
+ * @include container(true);
  */
 
-@mixin container($padding: 80px) {
+@mixin container($full: false, $padding: 80px) {
     width: 100%;
-    max-width: 1440px;
-    margin-inline: auto;
+    @if $full {
+        max-width: none;
+        margin-inline: 0;
+        padding-inline: 0;
+    } @else {
+        max-width: 1440px;
+        margin-inline: auto;
 
-    @include responsive(max, "xl") {
-        padding-inline: $padding;
-    }
+        @include responsive(max, "xl") {
+            padding-inline: $padding;
+        }
 
-    @include responsive(max, "md") {
-        padding-inline: 40px;
-    }
+        @include responsive(max, "md") {
+            padding-inline: 40px;
+        }
 
-    @include responsive(max, "sm") {
-        padding-inline: 20px;
+        @include responsive(max, "sm") {
+            padding-inline: 20px;
+        }
     }
 }

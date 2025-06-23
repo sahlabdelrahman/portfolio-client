@@ -1,6 +1,7 @@
 {
     "noData": "No data available yet, Please check back later.",
     "browserNotSupportVideoTag": "Your browser does not support the video tag.",
+    "browserNotSupportAudioTag": "Your browser does not support the audio tag.",
     "navigationArrows": "Slide Navigation Arrows",
     "prevSlide": "Previous slide",
     "nextSlide": "Next slide",

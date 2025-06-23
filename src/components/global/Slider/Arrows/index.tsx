@@ -5,6 +5,8 @@ import Button from "../../Button";
 // import PrevSlideIcon from "@/assets/icons/prevSlideIcon.svg";
 // import NextSlideIcon from "@/assets/icons/nextSlideIcon.svg";
 
+// TODO: Changes arrow with suitable arrows and style it
+
 import styles from "./styles.module.scss";
 
 interface ArrowsProps {

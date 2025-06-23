@@ -69,7 +69,7 @@ const ItemLayout = ({
                                 {title}
                             </p>
                         )}
-                        {title && (
+                        {description && (
                             <p
                                 className={`${styles.text} ${styles.description}`}
                             >

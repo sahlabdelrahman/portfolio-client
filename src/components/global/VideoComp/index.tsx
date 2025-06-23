@@ -18,7 +18,7 @@ const VideoComp = ({
     width = 200,
     height = 200,
     ariaLabel,
-    videoControls = {},
+    mediaControls = {},
     ...rest
 }: CustomVideoProps) => {
     const t = useTranslations("common");
@@ -50,12 +50,12 @@ const VideoComp = ({
             width={width}
             height={height}
             className={`${styles.video} ${className}`.trim()}
-            {...videoControls}
-            poster={videoControls?.poster?.url}
+            {...mediaControls}
+            poster={mediaControls?.poster?.url}
             preload="metadata"
             {...rest}
         >
-            {isVisible && <source src={url} type={videoControls.type} />}
+            {isVisible && <source src={url} type={mediaControls.type} />}
             {t("browserNotSupportVideoTag")}
         </video>
     );
