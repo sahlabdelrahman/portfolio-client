@@ -53,7 +53,7 @@ const ItemLayout = ({
     path?: string;
     action?: () => void;
 }) => {
-    const { type, title, description } = item;
+    const { type, title, description, caption } = item;
     return (
         <ItemWrapper path={path} action={action}>
             {type === contentTypes.video ? (
@@ -61,12 +61,12 @@ const ItemLayout = ({
             ) : (
                 <ImageComponent {...item} />
             )}
-            {(title || description) && (
+            {(title || caption || description) && (
                 <div className={styles.overlay}>
                     <div className={styles.content}>
-                        {title && (
+                        {(title || caption) && (
                             <p className={`${styles.text} ${styles.title}`}>
-                                {title}
+                                {title || caption}
                             </p>
                         )}
                         {description && (

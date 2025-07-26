@@ -19,9 +19,10 @@ export interface ItemProps {
     blurDataURL?: string;
     width: number;
     height: number;
-    ariaLabel: string;
+    ariaLabel?: string;
     duration?: number;
     mediaControls?: MediaControlsProps;
     title?: string;
+    caption?: string;
     description?: string;
 }

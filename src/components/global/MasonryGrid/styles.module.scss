@@ -1,0 +1,23 @@
+@import "@/styles/partials/mixins";
+@import "@/styles/partials/variables";
+
+.masonryGrid {
+    @include container();
+    column-count: 4;
+    gap: $gap-space;
+    overflow: hidden;
+    > * {
+        break-inside: avoid;
+        margin-bottom: $gap-space;
+    }
+
+    @include responsive(max, "xl") {
+        column-count: 3;
+    }
+    @include responsive(max, "md") {
+        column-count: 2;
+    }
+    @include responsive(max, "sm") {
+        column-count: 1;
+    }
+}
