@@ -1,0 +1,9 @@
+@import "@/styles/partials/mixins";
+
+.container {
+    @include container();
+    .flipBook {
+        margin: auto;
+        overflow: hidden;
+    }
+}
