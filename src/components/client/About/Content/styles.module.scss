@@ -1,0 +1,79 @@
+@import "@/styles/partials/mixins";
+
+.content {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    .image {
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+        img {
+            background: transparent;
+            max-height: 90dvh;
+            object-fit: contain;
+            object-position: center;
+        }
+        .caption {
+            font-size: 0.875rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        &.smallAndRoundedImage {
+            img {
+                width: 164px;
+                height: 164px;
+                padding: 0.25rem;
+                border-radius: 50%;
+                border: 1px solid var(--border-color);
+                object-fit: contain;
+                object-position: center;
+                background: transparent;
+            }
+        }
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .sections {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .title {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &.layout-imageLeft,
+    &.layout-imageRight {
+        .row {
+            display: flex;
+            gap: 1rem;
+
+            .col {
+                flex: 1 1;
+            }
+        }
+        @include responsive(max, "md") {
+            .row {
+                flex-direction: column;
+            }
+            .col {
+                flex: 1;
+            }
+        }
+    }
+}

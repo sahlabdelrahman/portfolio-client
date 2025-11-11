@@ -5,15 +5,15 @@ import { PageMetadataProps } from "@/types/client/metadata";
 import { generateGlobalMetadata } from "@/utils/helpers/metadata";
 
 const staticPageMetadata = {
-    title: "Singles",
-    description: "Explore my latest Singles.",
+    title: "About",
+    description: "About page",
     openGraph: {
         url: "",
         siteName: "",
         imageUrl: "",
         twitterHandle: "",
     },
-    keywords: ["singles"],
+    keywords: ["about"],
 };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -50,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
     });
 }
 
-export default function Singles({
+export default function About({
     children,
 }: Readonly<{
     children: React.ReactNode;
