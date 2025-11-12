@@ -10,11 +10,12 @@
     },
     "dependencies": {
         "dompurify": "^3.2.6",
-        "framer-motion": "^12.12.1",
+        "framer-motion": "^12.23.24",
         "next": "15.2.0",
         "next-intl": "^3.26.5",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
+        "react-hook-form": "^7.66.0",
         "react-pageflip": "^2.0.3"
     },
     "devDependencies": {

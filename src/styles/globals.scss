@@ -21,6 +21,9 @@
 
     /* transition */
     --global-transition: all 0.3s ease-in-out;
+
+    --danger-color: #ff4136;
+    --success-color: #237b4b;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -7,5 +7,16 @@
     "nextSlide": "Next slide",
     "slideNavigation": "Slide navigation",
     "goToSlide": "Go to slide {{number}}",
-    "imageSlider": "Image slider"
+    "imageSlider": "Image slider",
+    "form": {
+        "fullName": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "required": "This field is required.",
+        "minLength": "Too short.",
+        "maxLength": "Too long.",
+        "emailValidation": "Invalid email address.",
+        "send": "Send"
+    }
 }

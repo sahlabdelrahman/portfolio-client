@@ -7,5 +7,16 @@
     "nextSlide": "الشريحة التالية",
     "slideNavigation": "التنقل بين الشرائح",
     "goToSlide": "الانتقال إلى الشريحة {{number}}",
-    "imageSlider": "شرائح الصور"
+    "imageSlider": "شرائح الصور",
+    "form": {
+        "fullName": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "subject": "الموضوع",
+        "message": "الرسالة",
+        "required": "هذا الحقل مطلوب.",
+        "minLength": "قصير جدًا.",
+        "maxLength": "طويل جدًا.",
+        "emailValidation": "بريد إلكتروني غير صالح.",
+        "send": "إرسال"
+    }
 }

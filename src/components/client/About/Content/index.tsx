@@ -57,7 +57,7 @@ const Content = memo(({ data }: ContentProps) => {
             <div className={styles.sections}>
                 {sections.map((section) => (
                     <section className={styles.section} key={section.id}>
-                        <h2 className={styles.title}>{section.title}</h2>
+                        <h3 className={styles.title}>{section.title}</h3>
                         <div
                             dangerouslySetInnerHTML={{
                                 __html: DOMPurify.sanitize(section.content),
