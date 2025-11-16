@@ -1,0 +1,54 @@
+@use "@/styles/partials/mixins";
+@use "@/styles/partials/variables" as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: var(--background);
+    text-align: center;
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: var(--global-transition);
+    .title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .message {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        color: var(--foreground);
+        line-height: 1.5;
+    }
+
+    .button {
+        background-color: var(--foreground);
+        color: var(--text-white-color);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--global-transition);
+
+        &:hover {
+            background-color: var(--text-color);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    }
+}

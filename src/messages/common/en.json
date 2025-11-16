@@ -8,6 +8,12 @@
     "slideNavigation": "Slide navigation",
     "goToSlide": "Go to slide {{number}}",
     "imageSlider": "Image slider",
+    "tryAgain": "Try again",
+    "somethingWentWrong": "Something went wrong",
+    "anUnexpectedError": "An unexpected error occurred.",
+    "pageNotFoundTitle": "404 – Page Not Found",
+    "pageNotFoundMessage": "Sorry, the page you’re looking for doesn’t exist or has been moved.",
+    "goBackHome": "Go back home",
     "form": {
         "fullName": "Full Name",
         "email": "Email",

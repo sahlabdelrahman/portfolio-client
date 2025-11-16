@@ -38,7 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return generateGlobalMetadata();
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
     children,
     params,
 }: {

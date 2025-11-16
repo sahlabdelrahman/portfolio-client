@@ -8,6 +8,12 @@
     "slideNavigation": "التنقل بين الشرائح",
     "goToSlide": "الانتقال إلى الشريحة {{number}}",
     "imageSlider": "شرائح الصور",
+    "tryAgain": "حاول مرة أخرى",
+    "somethingWentWrong": "حدث خطأ ما",
+    "anUnexpectedError": "حدث خطأ غير متوقع",
+    "pageNotFoundTitle": "٤٠٤ - الصفحة غير موجودة",
+    "pageNotFoundMessage": "عذراً، الصفحة التي تبحث عنها غير موجودة أو قد تم نقلها.",
+    "goBackHome": "العودة إلى الصفحة الرئيسية",
     "form": {
         "fullName": "الاسم الكامل",
         "email": "البريد الإلكتروني",

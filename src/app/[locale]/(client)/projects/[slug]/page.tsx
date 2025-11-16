@@ -1,10 +1,18 @@
 // TODO: Remember to replace static data with data from the project response
+// import { notFound } from "next/navigation";
 
 import Content from "@/components/client/Project/Content";
 
 import { projects } from "./config";
 
+// export default function Project({{ params }}) {
 export default function Project() {
+    // const { slug } = await params;
+    // const project = await fetchProject(slug);
+
+    // if (!project) {
+    //     notFound();
+    // }
     return (
         <main>
             <Content
