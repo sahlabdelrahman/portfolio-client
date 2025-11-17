@@ -1,4 +1,7 @@
 import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
+
+import Loader from "../Loader/Loader";
+
 import styles from "./style.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,7 +22,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
     type = "button",
-    LoadingIndicator = <>Loading...</>,
+    LoadingIndicator = <Loader />,
     name = "Button",
     title = "Button",
     ariaLabel = "Button",
