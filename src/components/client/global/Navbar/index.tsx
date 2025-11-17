@@ -2,7 +2,7 @@
 // Will be refined later with final UI updates and translated labels.
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTransitionRouter } from "next-view-transitions";
 import { useLocale } from "next-intl";
 

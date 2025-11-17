@@ -8,6 +8,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import { routing } from "@/i18n/routing";
 
 import { generateGlobalMetadata } from "@/utils/helpers/metadata";
+import { themeColor } from "@/utils/helpers/metadata/config";
 
 import "../../styles/globals.scss";
 
@@ -28,11 +29,7 @@ const roboto = Roboto({
 });
 
 export const viewport = {
-    themeColor: [
-        // TODO: Change colors to variables
-        { media: "(prefers-color-scheme: light)", color: "cyan" },
-        { media: "(prefers-color-scheme: dark)", color: "black" },
-    ],
+    themeColor, // TODO: should get it also from settings api like the metadata
 };
 
 export async function generateMetadata(): Promise<Metadata> {

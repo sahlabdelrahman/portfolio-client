@@ -5,6 +5,9 @@ import { DefaultValues } from "./config";
 export async function generateGlobalMetadata(
     overrides: Partial<Metadata> = {}
 ): Promise<Metadata> {
+    // TODO: API call to get website settings and metadata
+    // const settings = await getSiteSettings();
+
     const defaultMetadata: Metadata = {
         title: {
             default: DefaultValues.title,
@@ -17,6 +20,14 @@ export async function generateGlobalMetadata(
         authors: DefaultValues.authors,
         creator: DefaultValues.creator,
         publisher: DefaultValues.publisher,
+
+        icons: {
+            icon: DefaultValues.icons.favicon,
+            shortcut: DefaultValues.icons.favicon,
+            apple: DefaultValues.icons.appleTouchIcon,
+            other: [{ rel: "manifest", url: "/manifest.json" }],
+        },
+
         openGraph: {
             title: DefaultValues.title,
             description: DefaultValues.description,
