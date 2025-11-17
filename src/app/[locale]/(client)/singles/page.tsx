@@ -1,3 +1,5 @@
+import AnimatedPageWrapper from "@/components/global/Slider/AnimatedPageWrapper";
+
 import ItemLayout from "@/components/global/ItemsLayout/ItemLayout";
 
 import MasonryGrid from "@/components/global/MasonryGrid";
@@ -8,12 +10,14 @@ import { dummySingleImages } from "./config";
 
 export default function Singles() {
     return (
-        <main>
-            <MasonryGrid>
-                {dummySingleImages?.map((item: ItemProps) => (
-                    <ItemLayout key={item?.id} item={item} />
-                ))}
-            </MasonryGrid>
-        </main>
+        <AnimatedPageWrapper>
+            <main>
+                <MasonryGrid>
+                    {dummySingleImages?.map((item: ItemProps) => (
+                        <ItemLayout key={item?.id} item={item} />
+                    ))}
+                </MasonryGrid>
+            </main>
+        </AnimatedPageWrapper>
     );
 }

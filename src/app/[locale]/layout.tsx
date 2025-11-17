@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ViewTransitions } from "next-view-transitions";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -54,14 +55,16 @@ export default async function LocaleLayout({
     const direction = locale === "ar" ? "rtl" : "ltr";
 
     return (
-        <html lang={locale} dir={direction}>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable}`}
-            >
-                <NextIntlClientProvider messages={messages}>
-                    {children}
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <ViewTransitions>
+            <html lang={locale} dir={direction}>
+                <body
+                    className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable}`}
+                >
+                    <NextIntlClientProvider messages={messages}>
+                        {children}
+                    </NextIntlClientProvider>
+                </body>
+            </html>
+        </ViewTransitions>
     );
 }

@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 
+import AnimatedPageWrapper from "@/components/global/Slider/AnimatedPageWrapper";
+
 import Button from "@/components/global/Button";
 
 import styles from "./error.module.scss";
@@ -20,14 +22,16 @@ export default function GlobalError({ error, reset }: ErrorProps) {
     }, [error]);
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>{t("somethingWentWrong")}</h1>
-            <p className={styles.message}>
-                {error.message || t("anUnexpectedError")}
-            </p>
-            <Button className={styles.button} onClick={() => reset()}>
-                {t("tryAgain")}
-            </Button>
-        </div>
+        <AnimatedPageWrapper>
+            <div className={styles.container}>
+                <h1 className={styles.title}>{t("somethingWentWrong")}</h1>
+                <p className={styles.message}>
+                    {error.message || t("anUnexpectedError")}
+                </p>
+                <Button className={styles.button} onClick={() => reset()}>
+                    {t("tryAgain")}
+                </Button>
+            </div>
+        </AnimatedPageWrapper>
     );
 }

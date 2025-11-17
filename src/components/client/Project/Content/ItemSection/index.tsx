@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 
 import NoData from "@/components/global/NoData";
+import Loader from "@/components/global/Loader";
 
 import { rendererRegistry } from "./rendererRegistry";
 import { ProjectItemProps } from "@/app/[locale]/(client)/projects/[slug]/types";
@@ -23,8 +24,7 @@ const ItemSection = ({ item }: ItemSectionProps) => {
                 background: item.config?.background ?? "",
             }}
         >
-            {/* TODO: Replace loading text with loading indicator */}
-            <Suspense fallback={"Loading..."}>
+            <Suspense fallback={<Loader />}>
                 {Renderer ? (
                     <Renderer item={item} />
                 ) : (

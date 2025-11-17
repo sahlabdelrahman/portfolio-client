@@ -1,12 +1,12 @@
 import ImageComponent from "@/components/global/ImageComponent";
 import VideoComp from "@/components/global/VideoComp";
+import Slider from "@/components/global/Slider";
 
 import { ItemProps } from "@/types/client/global";
 
 import { contentTypes } from "./config";
 
 import styles from "./styles.module.scss";
-import Slider from "@/components/global/Slider";
 
 interface ContentProps {
     data: ItemProps[];

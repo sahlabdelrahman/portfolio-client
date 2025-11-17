@@ -1,3 +1,5 @@
+import AnimatedPageWrapper from "@/components/global/Slider/AnimatedPageWrapper";
+
 import ItemsLayout from "@/components/global/ItemsLayout";
 import ItemLayout from "@/components/global/ItemsLayout/ItemLayout";
 
@@ -7,16 +9,18 @@ import { items } from "../../config";
 
 export default function Projects() {
     return (
-        <main>
-            <ItemsLayout>
-                {items?.map((item: ItemProps) => (
-                    <ItemLayout
-                        key={item?.id}
-                        item={item}
-                        path={`/projects/${item?.id}`}
-                    />
-                ))}
-            </ItemsLayout>
-        </main>
+        <AnimatedPageWrapper>
+            <main>
+                <ItemsLayout>
+                    {items?.map((item: ItemProps) => (
+                        <ItemLayout
+                            key={item?.id}
+                            item={item}
+                            path={`/projects/${item?.id}`}
+                        />
+                    ))}
+                </ItemsLayout>
+            </main>
+        </AnimatedPageWrapper>
     );
 }

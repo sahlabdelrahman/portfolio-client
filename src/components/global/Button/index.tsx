@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
-import Loader from "../Loader/Loader";
+import Loader from "../Loader";
 
 import styles from "./style.module.scss";
 
