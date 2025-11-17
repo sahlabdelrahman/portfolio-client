@@ -1,8 +1,8 @@
 "use client";
 
-import DOMPurify from "dompurify";
-
 import { memo } from "react";
+
+import SafeHTML from "@/components/global/SafeHTML/SafeHTML";
 
 import { ProjectItemProps } from "@/app/[locale]/(client)/projects/[slug]/types";
 
@@ -16,13 +16,11 @@ const TextRenderer = memo(function TextRenderer({
     if (!item?.text?.content) return null;
 
     return (
-        <div
+        <SafeHTML
+            html={item.text.content}
             className={styles.textRenderer}
             style={{
                 textAlign: item.text.direction ?? "start",
-            }}
-            dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(item.text.content),
             }}
         />
     );

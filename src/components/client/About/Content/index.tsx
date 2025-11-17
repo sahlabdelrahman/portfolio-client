@@ -1,10 +1,10 @@
 "use client";
 
 import { memo, useMemo } from "react";
-import DOMPurify from "dompurify";
 
 import ImageComponent from "@/components/global/ImageComponent";
 import NoData from "@/components/global/NoData";
+import SafeHTML from "@/components/global/SafeHTML/SafeHTML";
 
 import { AboutProps } from "@/types/client/about";
 import { layoutTypes } from "./config";
@@ -40,14 +40,7 @@ const Content = memo(({ data }: ContentProps) => {
     const renderText = useMemo(() => {
         if (!text) return null;
 
-        return (
-            <div
-                className={styles.text}
-                dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(text),
-                }}
-            />
-        );
+        return <SafeHTML html={text} className={styles.text} />;
     }, [text]);
 
     const renderSections = useMemo(() => {
@@ -58,11 +51,7 @@ const Content = memo(({ data }: ContentProps) => {
                 {sections.map((section) => (
                     <section className={styles.section} key={section.id}>
                         <h3 className={styles.title}>{section.title}</h3>
-                        <div
-                            dangerouslySetInnerHTML={{
-                                __html: DOMPurify.sanitize(section.content),
-                            }}
-                        />
+                        <SafeHTML html={section.content} />
                     </section>
                 ))}
             </div>
