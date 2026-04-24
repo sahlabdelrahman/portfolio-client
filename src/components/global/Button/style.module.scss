@@ -10,5 +10,7 @@
 
     &:disabled {
         cursor: not-allowed;
+        background-color: var(--disabled-background) !important;
+        color: var(--disabled-text-color) !important;
     }
 }

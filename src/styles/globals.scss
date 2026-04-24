@@ -8,13 +8,16 @@
     /* background */
     --background: #ffffff;
     --foreground: #171717;
+    --disabled-background: #f3f4f6;
 
     /* text */
     --text-color: #202224;
     --text-white-color: #e3e3e3;
+    --disabled-text-color: #9ca3af;
 
     /* border */
     --border-color: #e4e7ec;
+    --disabled-border-color: #e5e7eb;
 
     /* placeholder */
     --placeholder-color: #d7d9dd;
@@ -31,13 +34,16 @@
         /* background */
         --background: #121212;
         --foreground: #e0e0e0;
+        --disabled-background: #1f2937;
 
         /* text */
         --text-color: #e3e3e3;
         --text-white-color: #202224;
+        --disabled-text-color: #6b7280;
 
         /* border */
         --border-color: #33363a;
+        --disabled-border-color: #374151;
 
         /* placeholder */
         --placeholder-color: #757575;

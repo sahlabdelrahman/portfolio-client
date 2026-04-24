@@ -1,0 +1,26 @@
+{
+    "login": {
+        "title": "Welcome Back",
+        "description": "Log into your dashboard to manage your workspace.",
+        "submitText": "Login",
+        "forgotPassword": "Forgot password?"
+    },
+    "forgotPassword": {
+        "title": "Password Recovery",
+        "description": "We will recover your password, Enter your email to get OTP.",
+        "submitText": "Continue",
+        "backToLogin": "Back to Login"
+    },
+    "otpAuthentication": {
+        "title": "OTP Authentication",
+        "description": "An authentication code has been sent to your email.",
+        "submitText": "Continue",
+        "backToLogin": "Back to Login"
+    },
+    "resetPassword": {
+        "title": "Reset Password",
+        "description": "Create you new password at least 8 characters and include uppercase, lowercase, and a number.",
+        "submitText": "Change Password",
+        "backToLogin": "Back to Login"
+    }
+}

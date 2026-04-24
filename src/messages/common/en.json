@@ -17,12 +17,18 @@
     "form": {
         "fullName": "Full Name",
         "email": "Email",
+        "password": "Password",
+        "confirmationPassword": "Confirmation Password",
         "subject": "Subject",
         "message": "Message",
         "required": "This field is required.",
         "minLength": "Too short.",
         "maxLength": "Too long.",
         "emailValidation": "Invalid email address.",
-        "send": "Send"
+        "passwordValidation": "Password must be at least 8 characters and include uppercase, lowercase, and a number",
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordsDoNotMatch": "Passwords do not match",
+        "send": "Send",
+        "otp": "OTP"
     }
 }

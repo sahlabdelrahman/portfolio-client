@@ -1,4 +1,5 @@
 export const emailRegEx = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+export const passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
 
 export const framer_error = {
     initial: { opacity: 0, y: 10 },

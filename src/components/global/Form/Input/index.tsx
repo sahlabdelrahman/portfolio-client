@@ -1,24 +1,16 @@
 "use client";
 
-import { useEffect } from "react";
-import { useFormContext, RegisterOptions, FieldValues } from "react-hook-form";
+import { useEffect, useState } from "react";
+import { useFormContext, FieldValues } from "react-hook-form";
 import { AnimatePresence } from "framer-motion";
 
+import { FormField } from "@/types/dashboard/auth/form";
 import InputError from "../InputError";
 
-import styles from "./styles.module.scss";
+import EyeIcon from "@/components/global/icons/auth/EyeIcon";
+import EyeOffIcon from "@/components/global/icons/auth/EyeOffIcon";
 
-export interface InputProps {
-    name: string;
-    label?: string;
-    type?: string;
-    id: string;
-    placeholder?: string;
-    value?: string;
-    validation?: RegisterOptions;
-    multiline?: boolean;
-    numberOfLines?: number;
-}
+import styles from "./styles.module.scss";
 
 export const Input = ({
     name,
@@ -30,18 +22,26 @@ export const Input = ({
     validation = {},
     multiline = false,
     numberOfLines = 4,
-}: InputProps) => {
+    minLength,
+    maxLength,
+    onlyNumbers,
+}: FormField) => {
     const {
         register,
         formState: { errors },
         setValue,
     } = useFormContext<FieldValues>();
 
+    const [showPassword, setShowPassword] = useState(false);
+
+    const isPasswordField = type === "password";
+    const [hasValue, setHasValue] = useState(false);
+
     useEffect(() => {
         if (value !== undefined && value !== null) {
             setValue(name, value);
         }
-    }, [name, value, setValue]);
+    }, []);
 
     const hasError = !!errors?.[name]?.message;
     const isRequired = !!validation?.required;
@@ -61,16 +61,49 @@ export const Input = ({
                     placeholder={placeholder}
                     rows={numberOfLines}
                     className={styles.input}
+                    minLength={minLength}
+                    maxLength={maxLength}
                     {...register(name, validation)}
                 />
             ) : (
-                <input
-                    id={id}
-                    type={type}
-                    placeholder={placeholder}
-                    className={styles.input}
-                    {...register(name, validation)}
-                />
+                <div className={styles.fieldWrapper}>
+                    <input
+                        id={id}
+                        type={
+                            isPasswordField
+                                ? showPassword
+                                    ? "text"
+                                    : "password"
+                                : type
+                        }
+                        placeholder={placeholder}
+                        className={styles.input}
+                        minLength={minLength}
+                        maxLength={maxLength}
+                        {...register(name, validation)}
+                        onInput={(e) => {
+                            if (onlyNumbers) {
+                                e.currentTarget.value =
+                                    e.currentTarget.value.replace(/\D/g, "");
+                            }
+
+                            setHasValue(e.currentTarget.value.length > 0);
+                        }}
+                    />
+                    {isPasswordField && hasValue && (
+                        <button
+                            type="button"
+                            className={styles.togglePassword}
+                            onClick={() => setShowPassword((prev) => !prev)}
+                        >
+                            {showPassword ? (
+                                <EyeOffIcon width={20} height={20} />
+                            ) : (
+                                <EyeIcon width={20} height={20} />
+                            )}
+                        </button>
+                    )}
+                </div>
             )}
 
             <AnimatePresence mode="wait" initial={false}>

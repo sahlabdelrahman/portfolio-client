@@ -4,23 +4,23 @@ import { routing } from "./routing";
 import { MessagesProps } from "@/types/client/i18n";
 
 async function loadMessages(
-    locale: string
+    locale: string,
 ): Promise<MessagesProps | undefined> {
     try {
-        const [commonMessages, loginMessages] = await Promise.all([
+        const [commonMessages, authMessage] = await Promise.all([
             import(`../messages/common/${locale}.json`).then(
-                (m) => m.default as Record<string, string>
+                (m) => m.default as Record<string, string>,
             ),
-            import(`../messages/login/${locale}.json`).then(
-                (m) => m.default as Record<string, string>
+            import(`../messages/auth/${locale}.json`).then(
+                (m) => m.default as Record<string, string>,
             ),
         ]);
 
-        return { common: commonMessages, login: loginMessages };
+        return { common: commonMessages, auth: authMessage };
     } catch (error) {
         console.error(
             `Error loading translation files for locale "${locale}":`,
-            error
+            error,
         );
         return undefined;
     }

@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 
-import { InputProps } from "@/components/global/Form/Input";
+import { FormField } from "@/types/dashboard/auth/form";
 import { emailRegEx } from "@/utils/helpers/form/validations";
 
-export const useContactFields = (): InputProps[] => {
+export const useContactFields = (): FormField[] => {
     const t = useTranslations("common.form");
 
     return [

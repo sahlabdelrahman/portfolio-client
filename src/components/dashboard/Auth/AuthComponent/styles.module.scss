@@ -1,0 +1,13 @@
+@import "@/styles/partials/mixins";
+
+.content {
+    @include container();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100dvh;
+    @include responsive(max, "md") {
+        width: 90%;
+    }
+}
